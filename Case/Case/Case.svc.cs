@@ -22,6 +22,7 @@ namespace Case
             }
             else if (flag == 2)
             {
+                //test
                 toReturn = incomming.ToUpper();
             }
             else
