@@ -1,8 +1,9 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
 
 namespace Stocks
 {
-    [DataContract]
     public class QuoteInfo
     {
         public string symbol;
@@ -10,7 +11,15 @@ namespace Stocks
         public string LastPriceDate;
         public string LastPriceTime;
 
-        public QuoteInfo (string nSymbol, double nLP, string nLPD, string nLPT)
+        public QuoteInfo()
+        {
+            symbol = null;
+            LastPrice = 0;
+            LastPriceDate = null;
+            LastPriceTime = null;
+        }
+
+        public QuoteInfo(string nSymbol, double nLP, string nLPD, string nLPT)
         {
             symbol = nSymbol;
             LastPrice = nLP;
@@ -18,5 +27,4 @@ namespace Stocks
             LastPriceTime = nLPT;
         }
     }
-
 }

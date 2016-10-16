@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Stocks.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Stocks_StockService_DelayedStockQuote" Type="(Web Service URL)" Scope="Application">
+    <Setting Name="Stocks_SerfiveReference_DelayedStockQuote" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx</Value>
     </Setting>
   </Settings>

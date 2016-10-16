@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+using System.Web;
+using System.Web.Services;
 
 namespace Loan
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Loan" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Loan.svc or Loan.svc.cs at the Solution Explorer and start debugging.
-    public class Loan : ILoan
+    /// <summary>
+    /// Summary description for WebService1
+    /// </summary>
+    [WebService(Namespace = "http://tempuri.org/")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [System.ComponentModel.ToolboxItem(false)]
+
+    public class WebService1 : System.Web.Services.WebService
     {
+
+        [WebMethod]
         public float LoanPayment(float principleAmmount, float interestRate, int numPayments)
         {
             float monthlyPay = 0;

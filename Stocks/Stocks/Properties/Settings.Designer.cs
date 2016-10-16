@@ -27,9 +27,9 @@ namespace Stocks.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx")]
-        public string Stocks_StockService_DelayedStockQuote {
+        public string Stocks_SerfiveReference_DelayedStockQuote {
             get {
-                return ((string)(this["Stocks_StockService_DelayedStockQuote"]));
+                return ((string)(this["Stocks_SerfiveReference_DelayedStockQuote"]));
             }
         }
     }

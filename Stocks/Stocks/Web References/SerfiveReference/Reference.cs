@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace Stocks.StockService {
+namespace Stocks.SerfiveReference {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -40,7 +40,7 @@ namespace Stocks.StockService {
         
         /// <remarks/>
         public DelayedStockQuote() {
-            this.Url = global::Stocks.Properties.Settings.Default.Stocks_StockService_DelayedStockQuote;
+            this.Url = global::Stocks.Properties.Settings.Default.Stocks_SerfiveReference_DelayedStockQuote;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
