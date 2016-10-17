@@ -15,9 +15,19 @@
 			}
 		]
 	},
-	{"WebServiceName":"Loan","WebServicePostUrl":"http://localhost//Loan/WebService1.asmx","WebServiceBaseUrl":"http://localhost//Loan","UseTns":"false",
+	{"WebServiceName":"TextService","WebServicePostUrl":"http://localhost//TextService//Case.asmx","WebServiceBaseUrl":"http://localhost//TextService","UseTns":"false",
 		"WebServiceMethods":[
-			{"MethodName":"LoanPayment","MethodDisplayName":"LoanPayment","ReturnsDataSet":"false","MethodUrl":"http://localhost//Loan/LoanPayment",
+			{"MethodName":"CaseConvert","MethodDisplayName":"CaseConvert","ReturnsDataSet":"false","MethodUrl":"http://localhost//TextService/CaseConvert",
+				"ParameterInfo":[
+					{"ParamName":"incoming","ParamValue":"Test","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"},
+					{"ParamName":"flag","ParamValue":"2","DataType":"uint","Required":"true","RegularExp":"^[0-9]*$"}
+				]
+			}
+		]
+	},
+	{"WebServiceName":"VinniesLoanService","WebServicePostUrl":"http://localhost//VinniesLoanService/WebService1.asmx","WebServiceBaseUrl":"http://localhost//VinniesLoanService","UseTns":"false",
+		"WebServiceMethods":[
+			{"MethodName":"LoanPayment","MethodDisplayName":"LoanPayment","ReturnsDataSet":"false","MethodUrl":"http://localhost//VinniesLoanService/LoanPayment",
 				"ParameterInfo":[
 					{"ParamName":"principleAmmount","ParamValue":"2000.22","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
 					{"ParamName":"interestRate","ParamValue":"2.2","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
@@ -26,21 +36,11 @@
 			}
 		]
 	},
-	{"WebServiceName":"Stocks","WebServicePostUrl":"http://localhost//Stocks//Stocks.asmx","WebServiceBaseUrl":"http://localhost//Stocks","UseTns":"false",
+	{"WebServiceName":"TickerTape","WebServicePostUrl":"http://localhost//TickerTape//Stocks.asmx","WebServiceBaseUrl":"http://localhost//TickerTape","UseTns":"false",
 		"WebServiceMethods":[
-			{"MethodName":"GetQuote","MethodDisplayName":"GetQuote","ReturnsDataSet":"false","MethodUrl":"http://localhost//Stocks/GetQuote",
+			{"MethodName":"GetQuote","MethodDisplayName":"GetQuote","ReturnsDataSet":"false","MethodUrl":"http://localhost//TickerTape/GetQuote",
 				"ParameterInfo":[
 					{"ParamName":"tickerSymbol","ParamValue":"gg","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"}
-				]
-			}
-		]
-	},
-	{"WebServiceName":"Case","WebServicePostUrl":"http://localhost//Case//Case.asmx","WebServiceBaseUrl":"http://localhost//Case","UseTns":"false",
-		"WebServiceMethods":[
-			{"MethodName":"CaseConvert","MethodDisplayName":"CaseConvert","ReturnsDataSet":"false","MethodUrl":"http://localhost//Case/CaseConvert",
-				"ParameterInfo":[
-					{"ParamName":"incoming","ParamValue":"Test","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"},
-					{"ParamName":"flag","ParamValue":"2","DataType":"uint","Required":"true","RegularExp":"^[0-9]*$"}
 				]
 			}
 		]

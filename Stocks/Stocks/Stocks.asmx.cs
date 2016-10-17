@@ -12,7 +12,7 @@ namespace Stocks
     //If you want to run it from VS:
     //[WebService(Namespace = "http://localhost:65516//Stocks")]
     //If you want to publish it:
-    [WebService(Namespace = "http://localhost//Stocks")]
+    [WebService(Namespace = "http://localhost//TickerTape")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
@@ -24,7 +24,6 @@ namespace Stocks
         public QuoteInfo GetQuote(string tickerSymbol)
         {
             myLogging.Write(logFile, "GetQuote() was called. Parameter value(s): " + tickerSymbol);
-            //tickerSymbol = "gg";
             SerfiveReference.DelayedStockQuote serv = new SerfiveReference.DelayedStockQuote();
 
             SerfiveReference.QuoteData response = serv.GetQuote(tickerSymbol, 0.ToString());

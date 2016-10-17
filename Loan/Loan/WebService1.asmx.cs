@@ -12,7 +12,7 @@ namespace Loan
     //If you want to run it from VS:
     //[WebService(Namespace = "http://localhost:64879//Loan")]
     //If you want to publish it:
-    [WebService(Namespace = "http://localhost//Loan")]
+    [WebService(Namespace = "http://localhost//VinniesLoanService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 

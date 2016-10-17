@@ -12,7 +12,7 @@ namespace Case
     //If you want to run it from VS:
     //[WebService(Namespace = "http://localhost:65275//Case")]
     //If you want to publish it:
-    [WebService(Namespace = "http://localhost//Case")]
+    [WebService(Namespace = "http://localhost//TextService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
