@@ -1,0 +1,48 @@
+{"WebServicesList":[
+	{"WebServiceName":"Country Details","WebServicePostUrl":"http://www.webservicex.net/country.asmx","WebServiceBaseUrl":"http://www.webserviceX.NET","UseTns":"false",
+		"WebServiceMethods":[
+			{"MethodName":"GetCountriess","MethodDisplayName":"List of Countries","ReturnsDataSet":"true","MethodUrl":"http://www.webserviceX.NET/GetCountries"},			
+			{"MethodName":"GetCurrencies","MethodDisplayName":"The Currencies of Countries","ReturnsDataSet":"true","MethodUrl":"http://www.webserviceX.NET/GetCurrencies"},			
+			{"MethodName":"GetCountryByCountryCode","MethodDisplayName":"Country by Country Code","ReturnsDataSet":"true","MethodUrl":"http://www.webserviceX.NET/GetCountryByCountryCode",
+				"ParameterInfo":[
+					{"ParamName":"CountryCode","ParamValue":"Ca","DataType":"string","Required":"false","RegularExp":"^[a-zA-Z]{2}$"}
+				]
+			},
+			{"MethodName":"GetISOCountryCodeByCountyName","MethodDisplayName":"ISO Country Code by Country Name","ReturnsDataSet":"true","MethodUrl":"http://www.webserviceX.NET/GetISOCountryCodeByCountyName",
+				"ParameterInfo":[
+					{"ParamName":"CountryName","ParamValue":"Canada","DataType":"string","Required":"false","RegularExp":"^[a-zA-Z ']*$"}
+				]
+			}
+		]
+	},
+	{"WebServiceName":"Loan","WebServicePostUrl":"http://localhost:64879/WebService1.asmx","WebServiceBaseUrl":"http://localhost:64879/Loan","UseTns":"false",
+		"WebServiceMethods":[
+			{"MethodName":"LoanPayment","MethodDisplayName":"LoanPayment","ReturnsDataSet":"false","MethodUrl":"http://localhost//Loan/LoanPayment",
+				"ParameterInfo":[
+					{"ParamName":"principleAmmount","ParamValue":"2000.22","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
+					{"ParamName":"interestRate","ParamValue":"2.2","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
+					{"ParamName":"numPayments","ParamValue":"22","DataType":"int","Required":"true","RegularExp":"^[0-9]*$"}
+				]
+			}
+		]
+	},
+	{"WebServiceName":"Stocks","WebServicePostUrl":"http://localhost:65516/Stocks.asmx","WebServiceBaseUrl":"http://localhost:65516//Stocks","UseTns":"false",
+		"WebServiceMethods":[
+			{"MethodName":"GetQuote","MethodDisplayName":"GetQuote","ReturnsDataSet":"false","MethodUrl":"http://localhost//Stocks/GetQuote",
+				"ParameterInfo":[
+					{"ParamName":"tickerSymbol","ParamValue":"gg","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"}
+				]
+			}
+		]
+	},
+	{"WebServiceName":"Case","WebServicePostUrl":"http://localhost//Case.asmx","WebServiceBaseUrl":"http://localhost//Case","UseTns":"false",
+		"WebServiceMethods":[
+			{"MethodName":"CaseConvert","MethodDisplayName":"CaseConvert","ReturnsDataSet":"false","MethodUrl":"http://localhost//Case/CaseConvert",
+				"ParameterInfo":[
+					{"ParamName":"incoming","ParamValue":"Test","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"},
+					{"ParamName":"flag","ParamValue":"2","DataType":"uint","Required":"true","RegularExp":"^[0-9]*$"}
+				]
+			}
+		]
+	}
+]}

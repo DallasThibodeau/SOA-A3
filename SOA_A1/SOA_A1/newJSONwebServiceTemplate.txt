@@ -1,0 +1,14 @@
+{"WebServiceName":"","WebServicePostUrl":"","WebServiceBaseUrl":"","UseTns":"",
+		"WebServiceMethods":[
+			{"MethodName":"","MethodDisplayName":"","MethodUrl":"",
+				"ParameterInfo":[
+					{"ParamName":"","ParamValue":"","DataType":"","Required":"","RegularExp":""}
+				]
+			},
+			{"MethodName":"","MethodDisplayName":"","MethodUrl":"",
+				"ParameterInfo":[
+					{"ParamName":"","ParamValue":"","DataType":"","Required":""}
+				]
+			}
+		]
+	}

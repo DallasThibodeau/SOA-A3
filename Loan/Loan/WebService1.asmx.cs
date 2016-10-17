@@ -8,16 +8,19 @@ namespace Loan
     /// <summary>
     /// Summary description for WebService1
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    //[WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://localhost//Loan")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
     public class WebService1 : System.Web.Services.WebService
     {
+        private const string logFile = "C:\\SOA_A3\\Loan.txt";
 
         [WebMethod]
         public float LoanPayment(float principleAmmount, float interestRate, int numPayments)
         {
+            myLogging.Write(logFile, "LoanPayment() was called. Parameter value(s): " + principleAmmount + ", " + interestRate + ", " + numPayments);
             float monthlyPay = 0;
             float denominator = (float)Math.Pow(1 + Convert.ToDouble(interestRate), Convert.ToDouble(numPayments)) - 1;
 
