@@ -8,8 +8,11 @@ namespace Stocks
     /// <summary>
     /// Summary description for Stocks
     /// </summary>
-    //[WebService(Namespace = "http://tempuri.org/")]
-    [WebService(Namespace = "http://localhost:65516//Stocks")]
+    
+    //If you want to run it from VS:
+    //[WebService(Namespace = "http://localhost:65516//Stocks")]
+    //If you want to publish it:
+    [WebService(Namespace = "http://localhost//Stocks")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 

@@ -8,8 +8,11 @@ namespace Loan
     /// <summary>
     /// Summary description for WebService1
     /// </summary>
-    //[WebService(Namespace = "http://tempuri.org/")]
-    [WebService(Namespace = "http://localhost:64879//Loan")]
+    
+    //If you want to run it from VS:
+    //[WebService(Namespace = "http://localhost:64879//Loan")]
+    //If you want to publish it:
+    [WebService(Namespace = "http://localhost//Loan")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
