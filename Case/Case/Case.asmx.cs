@@ -34,6 +34,12 @@ namespace Case
             {
                 toReturn = incoming.ToLower();
             }
+            else
+            {
+                //throw soap fault: Invalid value for parameter: flag
+                myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'flag'");
+
+            }
 
             return toReturn;
         }

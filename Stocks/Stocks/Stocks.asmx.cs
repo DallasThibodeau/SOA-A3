@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace Stocks
 {
@@ -24,12 +25,30 @@ namespace Stocks
         public QuoteInfo GetQuote(string tickerSymbol)
         {
             myLogging.Write(logFile, "GetQuote() was called. Parameter value(s): " + tickerSymbol);
-            SerfiveReference.DelayedStockQuote serv = new SerfiveReference.DelayedStockQuote();
+            QuoteInfo respConverted = new QuoteInfo();
 
-            SerfiveReference.QuoteData response = serv.GetQuote(tickerSymbol, 0.ToString());
+            try
+            {
+                SerfiveReference.DelayedStockQuote serv = new SerfiveReference.DelayedStockQuote();
 
-            QuoteInfo respConverted = new QuoteInfo(response.StockSymbol, (double)response.LastTradeAmount, response.LastTradeDateTime.Date.ToString(), response.LastTradeDateTime.TimeOfDay.ToString());
-            
+                SerfiveReference.QuoteData response = serv.GetQuote(tickerSymbol, 0.ToString());
+
+                respConverted = new QuoteInfo(response.StockSymbol, (double)response.LastTradeAmount, response.LastTradeDateTime.Date.ToString(), response.LastTradeDateTime.TimeOfDay.ToString());
+
+            }
+            catch (SoapException ex)
+            {
+                //throw soap fault: SOAP exception. Message: ex.Message
+                myLogging.Write(logFile, "**ERROR**: SOAP exception. Message: " + ex.Message);
+
+            }
+            catch (Exception ex)
+            {
+                //throw soap fault: Unhandeled exception. Message: ex.Message
+                myLogging.Write(logFile, "**ERROR**: Unhandeled exception. Message: " + ex.Message);
+
+            }
+
             return respConverted;
         }
     }

@@ -27,8 +27,31 @@ namespace Loan
             float monthlyPay = 0;
             float denominator = (float)Math.Pow(1 + Convert.ToDouble(interestRate), Convert.ToDouble(numPayments)) - 1;
 
-            monthlyPay = interestRate + (interestRate / denominator);
-            monthlyPay *= principleAmmount;
+            if(principleAmmount < 0)
+            {
+                //throw soap fault: Invalid value for parameter: principleAmmount. Must be positive
+                myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'principleAmmount'");
+
+            }
+            if(numPayments <= 0)
+            {
+                //throw soap fault: Invalid value for parameter: numPayments. Must be greater than 0
+                myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'numPayments'");
+
+            }
+
+            try
+            {
+                monthlyPay = interestRate + (interestRate / denominator);
+                monthlyPay *= principleAmmount;
+            }
+            catch(Exception ex)
+            {
+                //throw soap fault: Unhandeled exception. Message: ex.Message
+                myLogging.Write(logFile, "**ERROR**: Unhandeled exception. Message: " + ex.Message);
+
+            }
+
             return monthlyPay;
         }
     }
