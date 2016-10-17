@@ -9,7 +9,7 @@ namespace Stocks
     /// Summary description for Stocks
     /// </summary>
     //[WebService(Namespace = "http://tempuri.org/")]
-    [WebService(Namespace = "http://localhost//Stocks")]
+    [WebService(Namespace = "http://localhost:65516//Stocks")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 

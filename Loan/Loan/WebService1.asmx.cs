@@ -9,7 +9,7 @@ namespace Loan
     /// Summary description for WebService1
     /// </summary>
     //[WebService(Namespace = "http://tempuri.org/")]
-    [WebService(Namespace = "http://localhost//Loan")]
+    [WebService(Namespace = "http://localhost:64879//Loan")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 

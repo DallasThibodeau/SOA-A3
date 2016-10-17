@@ -8,7 +8,8 @@ namespace Case
     /// <summary>
     /// Summary description for Case
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    //[WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://localhost:65275//Case")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 

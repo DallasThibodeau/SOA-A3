@@ -15,9 +15,9 @@
 			}
 		]
 	},
-	{"WebServiceName":"Loan","WebServicePostUrl":"http://localhost:64879/WebService1.asmx","WebServiceBaseUrl":"http://localhost:64879/Loan","UseTns":"false",
+	{"WebServiceName":"Loan","WebServicePostUrl":"http://localhost:64879/WebService1.asmx","WebServiceBaseUrl":"http://localhost:64879//Loan","UseTns":"false",
 		"WebServiceMethods":[
-			{"MethodName":"LoanPayment","MethodDisplayName":"LoanPayment","ReturnsDataSet":"false","MethodUrl":"http://localhost//Loan/LoanPayment",
+			{"MethodName":"LoanPayment","MethodDisplayName":"LoanPayment","ReturnsDataSet":"false","MethodUrl":"http://localhost:64879//Loan/LoanPayment",
 				"ParameterInfo":[
 					{"ParamName":"principleAmmount","ParamValue":"2000.22","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
 					{"ParamName":"interestRate","ParamValue":"2.2","DataType":"float","Required":"true","RegularExp":"^[0-9.]*$"},
@@ -26,18 +26,18 @@
 			}
 		]
 	},
-	{"WebServiceName":"Stocks","WebServicePostUrl":"http://localhost:65516/Stocks.asmx","WebServiceBaseUrl":"http://localhost:65516//Stocks","UseTns":"false",
+	{"WebServiceName":"Stocks","WebServicePostUrl":"http://localhost:65516//Stocks.asmx","WebServiceBaseUrl":"http://localhost:65516//Stocks","UseTns":"false",
 		"WebServiceMethods":[
-			{"MethodName":"GetQuote","MethodDisplayName":"GetQuote","ReturnsDataSet":"false","MethodUrl":"http://localhost//Stocks/GetQuote",
+			{"MethodName":"GetQuote","MethodDisplayName":"GetQuote","ReturnsDataSet":"false","MethodUrl":"http://localhost:65516//Stocks/GetQuote",
 				"ParameterInfo":[
 					{"ParamName":"tickerSymbol","ParamValue":"gg","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"}
 				]
 			}
 		]
 	},
-	{"WebServiceName":"Case","WebServicePostUrl":"http://localhost//Case.asmx","WebServiceBaseUrl":"http://localhost//Case","UseTns":"false",
+	{"WebServiceName":"Case","WebServicePostUrl":"http://localhost:65275//Case.asmx","WebServiceBaseUrl":"http://localhost:65275//Case","UseTns":"false",
 		"WebServiceMethods":[
-			{"MethodName":"CaseConvert","MethodDisplayName":"CaseConvert","ReturnsDataSet":"false","MethodUrl":"http://localhost//Case/CaseConvert",
+			{"MethodName":"CaseConvert","MethodDisplayName":"CaseConvert","ReturnsDataSet":"false","MethodUrl":"http://localhost:65275//Case/CaseConvert",
 				"ParameterInfo":[
 					{"ParamName":"incoming","ParamValue":"Test","DataType":"string","Required":"true","RegularExp":"^[a-zA-Z ']*$"},
 					{"ParamName":"flag","ParamValue":"2","DataType":"uint","Required":"true","RegularExp":"^[0-9]*$"}
