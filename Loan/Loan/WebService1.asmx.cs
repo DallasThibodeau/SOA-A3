@@ -8,13 +8,14 @@ namespace Loan
     /// <summary>
     /// Summary description for WebService1
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    //[WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://localhost//Loan")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
     public class WebService1 : System.Web.Services.WebService
     {
-
+        
         [WebMethod]
         public float LoanPayment(float principleAmmount, float interestRate, int numPayments)
         {
