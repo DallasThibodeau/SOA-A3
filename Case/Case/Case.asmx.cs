@@ -14,10 +14,12 @@ namespace Case
 
     public class Case : System.Web.Services.WebService
     {
+        private const string logFile = "C:\\SOA_A3\\Case.txt";
 
         [WebMethod]
         public string CaseConvert(string incoming, uint flag)
         {
+            myLogging.Write(logFile, "CaseConvert() was called. Parameter value(s): " + incoming + ", " + flag);
             string toReturn = "";
 
             if (flag == 1)

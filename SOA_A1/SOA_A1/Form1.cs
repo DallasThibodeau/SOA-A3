@@ -19,6 +19,7 @@ namespace SOA_A1
         private MultipleWebServices AvailibleWebServices;
         private string MyErrorMessage = "";
         private bool InvalidParameterWasEntered = false;
+        private const string logFile = "C:\\SOA_A3\\SOA_A2.txt";
 
         //Form1()
         //

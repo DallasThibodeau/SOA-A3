@@ -15,10 +15,12 @@ namespace Loan
 
     public class WebService1 : System.Web.Services.WebService
     {
-        
+        private const string logFile = "C:\\SOA_A3\\Loan.txt";
+
         [WebMethod]
         public float LoanPayment(float principleAmmount, float interestRate, int numPayments)
         {
+            myLogging.Write(logFile, "LoanPayment() was called. Parameter value(s): " + principleAmmount + ", " + interestRate + ", " + numPayments);
             float monthlyPay = 0;
             float denominator = (float)Math.Pow(1 + Convert.ToDouble(interestRate), Convert.ToDouble(numPayments)) - 1;
 
