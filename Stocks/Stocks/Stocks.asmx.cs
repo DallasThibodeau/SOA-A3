@@ -40,12 +40,14 @@ namespace Stocks
             {
                 //throw soap fault: SOAP exception. Message: ex.Message
                 myLogging.Write(logFile, "**ERROR**: SOAP exception. Message: " + ex.Message);
+                throw new SoapException("**ERROR**: SOAP exception. Message: " + ex.Message, SoapException.ClientFaultCode);
 
             }
             catch (Exception ex)
             {
                 //throw soap fault: Unhandeled exception. Message: ex.Message
                 myLogging.Write(logFile, "**ERROR**: Unhandeled exception. Message: " + ex.Message);
+                throw new SoapException("**ERROR**: Unhandeled exception. Message: " + ex.Message, SoapException.ClientFaultCode);
 
             }
 

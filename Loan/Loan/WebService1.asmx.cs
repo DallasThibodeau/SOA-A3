@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace Loan
 {
@@ -31,12 +32,14 @@ namespace Loan
             {
                 //throw soap fault: Invalid value for parameter: principleAmmount. Must be positive
                 myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'principleAmmount'");
+                throw new SoapException("**ERROR**: Invalid value for parameter 'principleAmmount'", SoapException.ClientFaultCode);
 
             }
             if(numPayments <= 0)
             {
                 //throw soap fault: Invalid value for parameter: numPayments. Must be greater than 0
                 myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'numPayments'");
+                throw new SoapException("**ERROR**: Invalid value for parameter 'numPayments'", SoapException.ClientFaultCode);
 
             }
 
@@ -47,9 +50,8 @@ namespace Loan
             }
             catch(Exception ex)
             {
-                //throw soap fault: Unhandeled exception. Message: ex.Message
                 myLogging.Write(logFile, "**ERROR**: Unhandeled exception. Message: " + ex.Message);
-
+                throw new SoapException("**ERROR**: Unhandeled exception. Message: " + ex.Message, SoapException.ClientFaultCode);
             }
 
             return monthlyPay;
