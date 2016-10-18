@@ -26,7 +26,8 @@ namespace Loan
         {
             myLogging.Write(logFile, "LoanPayment() was called. Parameter value(s): " + principleAmmount + ", " + interestRate + ", " + numPayments);
             float monthlyPay = 0;
-            float denominator = (float)Math.Pow(1 + Convert.ToDouble(interestRate), Convert.ToDouble(numPayments)) - 1;
+            float rate = interestRate / 1200;
+            float denominator = (float)Math.Pow(1 + Convert.ToDouble(rate), Convert.ToDouble(numPayments)) - 1;
 
             if(principleAmmount < 0)
             {
@@ -45,7 +46,7 @@ namespace Loan
 
             try
             {
-                monthlyPay = interestRate + (interestRate / denominator);
+                monthlyPay = rate + (rate / denominator);
                 monthlyPay *= principleAmmount;
             }
             catch(Exception ex)

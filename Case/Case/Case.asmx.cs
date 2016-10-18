@@ -13,9 +13,9 @@ namespace Case
     /// </summary>
 
     //If you want to run it from VS:
-    //[WebService(Namespace = "http://localhost:65275//Case")]
+    [WebService(Namespace = "http://localhost:65275//Case")]
     //If you want to publish it:
-    [WebService(Namespace = "http://localhost//TextService")]
+    //[WebService(Namespace = "http://localhost//TextService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
 
@@ -46,7 +46,7 @@ namespace Case
             else
             {
                 myLogging.Write(logFile, "**ERROR**: Invalid value for parameter 'flag'");
-                throw new SoapException("**ERROR**: Invalid value for parameter 'flag'", SoapException.ClientFaultCode);
+                throw new SoapException("**ERROR**: Invalid value for parameter 'flag'", SoapException.ServerFaultCode);
             }
 
             return toReturn;
