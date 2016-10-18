@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Web.Script.Serialization;
 using System.Xml;
 using System.Text.RegularExpressions;
+using System.Web.Services.Protocols;
 
 namespace SOA_A1
 {
@@ -231,7 +232,11 @@ namespace SOA_A1
 
                         }
                     }
-                    catch (WebException ex)
+                    catch (SoapException ex)
+                    {
+                        txtRequestResponse.Text = "SOAP Exception has occurred. Message: " + ex.Message;
+                    }
+                    catch (WebException)
                     {
                         txtRequestResponse.Text = "Unableto connect to webservice. Remote name could not be resolved.";
                     }
